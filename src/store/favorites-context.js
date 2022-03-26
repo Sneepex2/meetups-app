@@ -1,8 +1,8 @@
 import { createContext, useEffect, useState } from 'react';
 
 const FavoritesContext = createContext({
-  favorites: localStorage.getItem('favoritesContext'),
-  totalFavorites: localStorage.getItem('favoritesContext').length,
+  favorites: [],
+  totalFavorites: 0,
   addFavorite: (favoriteMeetup) => {},
   removeFavorite: (meetupId) => {},
   itemIsFavorite: (meetupId) => {},
