@@ -10,9 +10,7 @@ function AllMeetupsPage() {
   useEffect(() => {
     setIsLoading(true);
     axios
-      .get(
-        'http://meetupsapp-env.eba-5urxrgty.eu-west-3.elasticbeanstalk.com/meetups'
-      )
+      .get('https://eht7cx8d3g.execute-api.eu-west-3.amazonaws.com/meetups')
       .then((res) => {
         console.log(res);
         return res.data;

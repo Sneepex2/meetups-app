@@ -6,16 +6,13 @@ function NewMeetupPage() {
   const navigate = useNavigate();
 
   function addMeetupHandler(meetupData) {
-    fetch(
-      'http://meetupsapp-env.eba-5urxrgty.eu-west-3.elasticbeanstalk.com/meetups',
-      {
-        method: 'POST',
-        body: JSON.stringify(meetupData),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      }
-    ).then(() => {
+    fetch('https://eht7cx8d3g.execute-api.eu-west-3.amazonaws.com/meetups', {
+      method: 'POST',
+      body: JSON.stringify(meetupData),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }).then(() => {
       navigate('/meetups/', { replace: true });
     });
   }
