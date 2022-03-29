@@ -9,6 +9,7 @@ function MainNavigation() {
 
   return (
     <header className={classes.header}>
+      <img alt='logo' src='/sus-logo.png' />
       <div className={classes.logo}>Sussy Meetups</div>
       <nav>
         <ul>
