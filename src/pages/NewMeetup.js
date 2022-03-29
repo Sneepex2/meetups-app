@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import NewMeetupForm from '../components/meetups/NewMeetupForm';
@@ -16,6 +17,10 @@ function NewMeetupPage() {
       navigate('/meetups/', { replace: true });
     });
   }
+
+  useEffect(() => {
+    document.title = 'Create New Meetup';
+  }, []);
 
   return (
     <section>

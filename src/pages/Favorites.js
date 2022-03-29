@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 
 import FavoritesContext from '../store/favorites-context';
 import MeetupList from '../components/meetups/MeetupList';
@@ -13,6 +13,10 @@ function FavoritesPage() {
   } else {
     content = <MeetupList meetups={favoritesCtx.favorites} />;
   }
+
+  useEffect(() => {
+    document.title = 'Favorite Meetups';
+  }, []);
 
   return (
     <section>

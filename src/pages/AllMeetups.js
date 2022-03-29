@@ -8,6 +8,7 @@ function AllMeetupsPage() {
   const [loadedMeetups, setLoadedMeetups] = useState([]);
 
   useEffect(() => {
+    document.title = 'All Meetups';
     setIsLoading(true);
     axios
       .get('https://eht7cx8d3g.execute-api.eu-west-3.amazonaws.com/meetups')
