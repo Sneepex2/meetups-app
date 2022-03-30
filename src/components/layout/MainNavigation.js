@@ -10,7 +10,10 @@ function MainNavigation() {
   return (
     <header className={classes.header}>
       <img alt='logo' src={require('../../images/sus-logo.png')} />
-      <div className={classes.logo}>Sussy Meetups</div>
+      <Link className={classes.logoLink} to='/'>
+        <div className={classes.logo}>Sussy Meetups</div>
+      </Link>
+
       <nav>
         <ul>
           <li>

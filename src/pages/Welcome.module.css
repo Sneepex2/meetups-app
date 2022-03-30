@@ -1,0 +1,17 @@
+.image {
+  text-align: center;
+}
+
+.welcome img {
+  width: 70%;
+}
+
+.welcome h2 {
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 800px) {
+  .welcome img {
+    width: 40%;
+  }
+}

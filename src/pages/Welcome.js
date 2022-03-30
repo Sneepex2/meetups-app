@@ -1,9 +1,13 @@
+import classes from './Welcome.module.css';
+
 function Welcome() {
   return (
-    <section>
+    <section className={classes.welcome}>
       <h1>Welcome to Sussy Meetups</h1>
-      <h2>Enjoy ur stay</h2>
-      <img src={require('../images/sus-logo.png')}></img>
+      <h2>You can Create, Explore and Sus da Meetups!</h2>
+      <div className={classes.image}>
+        <img src={require('../images/sus-logo.png')}></img>
+      </div>
     </section>
   );
 }

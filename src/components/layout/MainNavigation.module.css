@@ -8,9 +8,12 @@
   padding: 0 10%;
 }
 
-.logo {
+.logoLink {
   margin-left: 0;
   margin-right: auto;
+}
+
+.logo {
   font-size: 2rem;
   color: white;
   font-weight: bold;
