@@ -43,3 +43,9 @@
   background-color: #a50e48;
   border-color: #a50e48;
 }
+
+@media (max-width: 500px) {
+  .form {
+    font-size: 0.75rem;
+  }
+}

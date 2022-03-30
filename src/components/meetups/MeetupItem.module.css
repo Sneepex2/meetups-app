@@ -44,3 +44,17 @@
 .actions button:active {
   background-color: #ffe2ed;
 }
+
+@media (max-width: 500px) {
+  .item {
+    font-size: 0.75rem;
+  }
+
+  .image {
+    height: 70%;
+  }
+
+  .content h3 {
+    font-size: 1rem;
+  }
+}

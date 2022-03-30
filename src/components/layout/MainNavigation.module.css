@@ -16,6 +16,14 @@
   font-weight: bold;
 }
 
+.badge {
+  background-color: #cc2062;
+  color: white;
+  border-radius: 12px;
+  padding: 0 1rem;
+  margin-left: 0rem;
+}
+
 .header img {
   max-width: 100%;
   max-height: 100%;
@@ -46,10 +54,25 @@
   color: white;
 }
 
-.badge {
-  background-color: #cc2062;
-  color: white;
-  border-radius: 12px;
-  padding: 0 1rem;
-  margin-left: 0.5rem;
+@media (max-width: 500px) {
+  .header {
+    height: 3rem;
+    padding: 0 5%;
+  }
+
+  .header img {
+    padding-right: 10px;
+  }
+
+  .logo {
+    font-size: 0.75rem;
+  }
+
+  .header li {
+    margin-left: 0.5rem;
+  }
+
+  .header a {
+    font-size: 0.5rem;
+  }
 }
