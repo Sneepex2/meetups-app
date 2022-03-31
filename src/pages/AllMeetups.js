@@ -1,11 +1,15 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
+import Collapsible from 'react-collapsible';
 
 import MeetupList from '../components/meetups/MeetupList';
 
 function AllMeetupsPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [loadedMeetups, setLoadedMeetups] = useState([]);
+  const [sortType, setSortType] = useState({
+    value: 'Newest',
+  });
 
   useEffect(() => {
     document.title = 'All Meetups';
@@ -43,10 +47,22 @@ function AllMeetupsPage() {
     );
   }
 
+  function newestHandler() {
+    setSortType('Newest');
+  }
+
+  function oldestHandler() {
+    setSortType('Oldest');
+  }
+
   return (
     <section>
       <h1>All Meetups</h1>
-      <MeetupList meetups={loadedMeetups} />
+      <Collapsible trigger='Sort' transitionTime={100}>
+        <button onClick={newestHandler}>Newest</button>
+        <button onClick={oldestHandler}>Oldest</button>
+      </Collapsible>
+      <MeetupList meetups={loadedMeetups} sortType={sortType} />
     </section>
   );
 }
