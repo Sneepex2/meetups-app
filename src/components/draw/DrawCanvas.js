@@ -20,9 +20,9 @@ function DrawCanvas(props) {
       let startX;
       let startY;
 
-      context.strokeStyle = '#000000';
+      context.strokeStyle = '#FFFFFF';
 
-      context.fillStyle = 'white';
+      context.fillStyle = 'black';
       context.rect(0, 0, 300, 300);
       context.fill();
       context.beginPath();
@@ -60,19 +60,17 @@ function DrawCanvas(props) {
     const canvas = canvasRef.current;
     const context = canvas.getContext('2d');
     context.clearRect(0, 0, canvas.width, canvas.height);
-    context.fillStyle = 'white';
+    context.fillStyle = 'black';
     context.rect(0, 0, 300, 300);
     context.fill();
     context.beginPath();
   }
 
   function sendData() {
-    const canvas = canvasRef.current;
-    const context = canvas.getContext('2d');
-    let image = new Image();
-    image.src = canvas.toDataURL('image/jpeg', 1);
-
-    const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+    var link = document.createElement('a');
+    link.download = 'num.jpg';
+    link.href = canvasRef.current.toDataURL();
+    link.click();
   }
 
   return (
